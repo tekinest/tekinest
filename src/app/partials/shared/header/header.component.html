@@ -1,0 +1,30 @@
+<div class="head" [ngClass]="{'small-header': small == 'small'}">
+  <div class="head-fixed" [ngClass]="{'small-header': small == 'small'}">
+    <div class="head-fixed-inner" [ngClass]="{'small-header': small == 'small'}">
+      <div class="head-inner">
+        <div class="logo">
+          <a href="" routerLink="">
+            <img style="height: 35px;" src="../../../../assets/logo-020823.png" alt="">
+          </a>
+        </div>
+        <nav>
+          <a href="" routerLink="" class="links" [class.active]="this.route.url == '/'">
+            Home
+          </a>
+          <a href="#services" class="links" (click)="toService()" [class.active]="this.route.url == '/#services'">
+            Services
+          </a>
+          <a href="#" class="links" routerLink="about" [class.active]="this.route.url == '/about'">
+            About Us
+          </a>
+          <a href="#" class="links" routerLink="contact" [class.active]="this.route.url == '/contact'">
+            Contact
+          </a>
+        </nav>
+        <div class="menu" (click)="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

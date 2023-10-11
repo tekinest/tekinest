@@ -1,0 +1,48 @@
+.wrap {
+  background: #ff1053;
+  width: 100%;
+  padding: 70px 0;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.14), 0 20px 70px rgba(0,0,0,0.12);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.45s cubic-bezier(0.25, 1, 0.33, 1),opacity 0.45s cubic-bezier(0.25, 1, 0.33, 1);
+}
+h3 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important; 
+}
+.main-discover {
+  position: relative;
+  display: inline-block;
+  color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  background-color: transparent;
+  border-radius: 4px;
+  transition: all .45s cubic-bezier(0.25,1,0.33,1);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 40px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.main-discover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  color: #333;
+}
+.main-discover span {
+  transition: opacity .45s cubic-bezier(0.25,1,0.33,1),transform .45s cubic-bezier(0.25,1,0.33,1);
+  transform: translateX(0);
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important; 
+}

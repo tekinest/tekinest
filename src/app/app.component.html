@@ -1,0 +1,33 @@
+<section>
+  <div class="inner-section">
+    <div class="wrap" [class.open]="appService.menuOpen">
+      <div class="overflow-class" (scroll)="scroll($event)">
+        <app-header small="{{smallHeader}}" id="upp" *ngIf="!this.route.url.includes('/newsec')"></app-header>
+        <router-outlet></router-outlet>
+        <app-footer *ngIf="!this.route.url.includes('/newsec')"></app-footer>
+      </div>
+      <a class="close" [class.active]="appService.menuOpen" (click)="toggleView()">
+        <span class="x-span">
+          <span [class.active]="appService.menuOpen" class="line"></span>
+          <span [class.active]="appService.menuOpen" class="line-two"></span>
+        </span>
+      </a>
+    </div>
+    <div class="nav-section" *ngIf="appService.menuOpen">
+      <ul class="nav-links">
+        <li>
+          <a href="#" routerLink="" (click)="toggleView()">Home</a>
+        </li>
+        <li>
+          <a href="#services" >Services</a>
+        </li>
+        <li>
+          <a href="#" routerLink="about" (click)="toggleView()">About Us</a>
+        </li>
+        <li>
+          <a href="#" routerLink="contact" (click)="toggleView()">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

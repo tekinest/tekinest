@@ -1,0 +1,21 @@
+<section class="wrap">
+  <div class="head-fixed">
+    <div class="head-inner">
+      <div class="left">
+        <img src="../../../../assets/newsec-logo.png" alt="newsec" title="Newsec">
+        <div class="nav-wrap">
+          <a href="" routerLink="/newsec/dashboard">Home</a>
+          <!-- <a href="#">Dashboard</a> -->
+          <!-- <a href="#">Members</a> -->
+        </div>
+      </div>
+      <div class="right">
+        <img src="user.user && user.user.avatar ? user.user.avatar : ''" 
+        class="profile-img" *ngIf="user.user && user.user.avatar">
+        <div class="profile-img" *ngIf="!user.user || !user.user.avatar">
+          <i class="far fa-building"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
