@@ -1,0 +1,19 @@
+h4 {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  color: #333;
+  font-size: 20px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+p {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-size: 15px;
+  color: rgba(10,10,10,0.75);
+  transition: 0.3s;
+  font-weight: 600;
+  line-height: 32px;
+}
