@@ -1,27 +1,59 @@
-# Tekinest
+# Tekinest Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+A modern, responsive website for Tekinest - a technology consulting company that democratizes technological solutions for small businesses and the general public globally.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Modern Design**: Clean, professional aesthetic with Tekinest brand colors
+- **Responsive**: Mobile-first design that works on all devices
+- **Smooth Animations**: Framer Motion for engaging user interactions
+- **Performance Optimized**: Built with Next.js 14+ and optimized for speed
+- **Accessible**: WCAG compliant with proper semantic HTML and ARIA labels
 
-## Code scaffolding
+## Technology Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Framework**: Next.js 14+ with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
 
-## Build
+## Sections
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Hero**: Compelling headline with call-to-action
+- **Mission**: Company mission and values
+- **Services**: Consulting services showcase (AI Cloud Solutions, Email Services, IT Services, Process Enhancement)
+- **Clients**: Success stories and case studies
+- **About**: Company background and career opportunities
+- **Contact**: Contact information and social links
 
-## Running unit tests
+## Getting Started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+First, install dependencies:
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Then, run the development server:
 
-## Further help
+```bash
+npm run dev
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Brand Guidelines
+
+- **Colors**: Black (#000000), Dark Gray (#141414), White (#FFFFFF), Blue (#1E90FF), Green (#2ECC71)
+- **Tone**: Professional, warm, direct, corporate style
+- **Content**: Focus on democratizing technology and helping small businesses
+
+## Contributing
+
+This project follows the Tekinest brand guidelines and focuses on accessibility and performance.
+
+## License
+
+© 2025 Tekinest. All rights reserved.
