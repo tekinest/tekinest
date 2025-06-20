@@ -208,9 +208,6 @@ export default function ServicesPage() {
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
                 <Link href="/contact">Contact Us Today</Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-green-500 text-green-400 hover:bg-green-500 hover:text-black px-8 py-4 text-lg">
-                <Link href="/clients">View Our Work</Link>
-              </Button>
             </div>
           </motion.div>
         </div>
