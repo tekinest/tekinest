@@ -3,10 +3,14 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu"
+import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { useState } from "react"
 
 export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
   return (
     <nav className="fixed top-0 w-full z-50 flex justify-center px-4 pt-4">
       <div className="bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl px-6 py-4 max-w-6xl w-full">
@@ -28,6 +32,7 @@ export default function Navbar() {
             </Link>
           </motion.div>
           
+          {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex space-x-8">
               <NavigationMenuItem>
@@ -171,12 +176,134 @@ export default function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <div className="flex items-center space-x-4">
+          {/* Desktop Get Started Button */}
+          <div className="hidden md:flex items-center space-x-4">
             <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white">
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-white hover:bg-gray-800"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden mt-4 pt-4 border-t border-gray-700"
+          >
+            <div className="flex flex-col space-y-4">
+              {/* Services */}
+              <div>
+                <h3 className="text-white font-semibold mb-2">Services</h3>
+                <div className="flex flex-col space-y-2 pl-4">
+                  <Link 
+                    href="/services/ai-cloud" 
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    AI Cloud Solutions
+                  </Link>
+                  <Link 
+                    href="/services/email" 
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Email Services
+                  </Link>
+                  <Link 
+                    href="/services/it-support" 
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    IT Support
+                  </Link>
+                  <Link 
+                    href="/services" 
+                    className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    View All Services
+                  </Link>
+                </div>
+              </div>
+
+              {/* Solutions */}
+              <div>
+                <h3 className="text-white font-semibold mb-2">Solutions</h3>
+                <div className="flex flex-col space-y-2 pl-4">
+                  <Link 
+                    href="/solutions/chatnest" 
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    ChatNest
+                  </Link>
+                  <Link 
+                    href="/solutions/tekisite" 
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    TekiSite
+                  </Link>
+                  <Link 
+                    href="/solutions" 
+                    className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    View All Solutions
+                  </Link>
+                </div>
+              </div>
+
+              {/* Main Navigation */}
+              <div className="flex flex-col space-y-3 pt-2">
+                <Link 
+                  href="/clients" 
+                  className="text-gray-300 hover:text-blue-400 transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Clients
+                </Link>
+                <Link 
+                  href="/about" 
+                  className="text-gray-300 hover:text-blue-400 transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  About
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="text-gray-300 hover:text-blue-400 transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+              </div>
+
+              {/* Mobile Get Started Button */}
+              <div className="pt-4">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                    Get Started
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        )}
       </div>
     </nav>
   )

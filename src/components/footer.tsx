@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-black border-t border-gray-800">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="mb-4">
@@ -56,6 +56,33 @@ export default function Footer() {
               <li>
                 <Link href="/services" className="text-gray-400 hover:text-blue-400 transition-colors">
                   View All Services
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Solutions</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/solutions/chatnest" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  ChatNest
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/tekisite" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  TekiSite
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/business-automation" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  Business Automation
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  View All Solutions
                 </Link>
               </li>
             </ul>
