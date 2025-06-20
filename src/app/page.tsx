@@ -15,8 +15,54 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto text-center">
+      <section className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+        {/* Animated Background Lines */}
+        <div className="absolute inset-0 pointer-events-none">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-0.5 h-20 bg-gradient-to-b from-transparent via-blue-500/30 to-transparent"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `-${Math.random() * 20 + 10}%`,
+                transform: `rotate(${Math.random() * 30 - 15}deg)`,
+              }}
+              animate={{
+                y: ["0vh", "120vh"],
+                opacity: [0, 1, 0],
+              }}
+              transition={{
+                duration: Math.random() * 3 + 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: "linear",
+              }}
+            />
+          ))}
+          {[...Array(15)].map((_, i) => (
+            <motion.div
+              key={`secondary-${i}`}
+              className="absolute w-0.5 h-32 bg-gradient-to-b from-transparent via-gray-400/20 to-transparent"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `-${Math.random() * 20 + 10}%`,
+                transform: `rotate(${Math.random() * 40 - 20}deg)`,
+              }}
+              animate={{
+                y: ["0vh", "120vh"],
+                opacity: [0, 0.8, 0],
+              }}
+              transition={{
+                duration: Math.random() * 4 + 3,
+                repeat: Infinity,
+                delay: Math.random() * 3,
+                ease: "linear",
+              }}
+            />
+          ))}
+        </div>
+        
+        <div className="container mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -245,7 +291,7 @@ export default function Home() {
                 <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-white">Our Story</h3>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
                   Tekinest was founded to feed our passion for helping small businesses with their technological needs. 
-                  We grew up with the internet among people who didn't know how to use technology, so helping them use 
+                  We grew up with the internet among people who didn&apos;t know how to use technology, so helping them use 
                   technology to solve their needs brings deep meaning to our work.
                 </p>
               </div>

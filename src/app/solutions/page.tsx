@@ -73,7 +73,7 @@ export default function SolutionsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Badge variant="outline" className="border-green-500 text-green-400 mb-6">
+            <Badge variant="outline" className="border-blue-500 text-blue-400 mb-6">
               Our Solutions
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -105,7 +105,7 @@ export default function SolutionsPage() {
                     <solution.icon className="h-12 w-12 text-blue-400 mr-4" />
                     <div>
                       <h2 className="text-4xl font-bold text-white">{solution.name}</h2>
-                      <p className="text-lg text-green-400 mt-1">{solution.tagline}</p>
+                      <p className="text-lg text-blue-400 mt-1">{solution.tagline}</p>
                     </div>
                   </div>
                   
@@ -132,7 +132,7 @@ export default function SolutionsPage() {
                     <ul className="space-y-2">
                       {solution.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="text-gray-300 flex items-start">
-                          <Star className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                          <Star className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
                           {benefit}
                         </li>
                       ))}
@@ -146,7 +146,7 @@ export default function SolutionsPage() {
                       </Link>
                     </Button>
                     {solution.status === "Available Now" && (
-                      <Button variant="outline" className="border-green-500 text-green-400 hover:bg-green-500 hover:text-black">
+                      <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white">
                         <Link href="/contact">Get Started</Link>
                       </Button>
                     )}
@@ -161,13 +161,13 @@ export default function SolutionsPage() {
                         <solution.icon className="h-16 w-16 text-blue-400" />
                         <Badge 
                           variant={solution.status === "Available Now" ? "default" : "secondary"}
-                          className={solution.status === "Available Now" ? "bg-green-600/20 text-green-400" : "bg-orange-600/20 text-orange-400"}
+                          className={solution.status === "Available Now" ? "bg-blue-600/20 text-blue-400" : "bg-orange-600/20 text-orange-400"}
                         >
                           {solution.status}
                         </Badge>
                       </div>
                       <CardTitle className="text-white text-2xl">{solution.name}</CardTitle>
-                      <CardDescription className="text-green-400 text-lg">
+                      <CardDescription className="text-blue-400 text-lg">
                         {solution.tagline}
                       </CardDescription>
                     </CardHeader>
@@ -285,7 +285,7 @@ export default function SolutionsPage() {
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
                 <Link href="/contact">Get Started Today</Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-green-500 text-green-400 hover:bg-green-500 hover:text-black px-8 py-4 text-lg">
+              <Button variant="outline" size="lg" className="border-gray-600 text-gray-300 hover:bg-gradient-to-b hover:from-gray-800 hover:to-[#0d0d12] hover:text-white px-8 py-4 text-lg">
                 <Link href="/services">Explore All Services</Link>
               </Button>
             </div>

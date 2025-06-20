@@ -65,7 +65,7 @@ export default function ClientsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Badge variant="outline" className="border-green-500 text-green-400 mb-6">
+            <Badge variant="outline" className="border-blue-500 text-blue-400 mb-6">
               Our Clients
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -97,7 +97,7 @@ export default function ClientsPage() {
                     <client.icon className="h-12 w-12 text-blue-400 mr-4" />
                     <div>
                       <h2 className="text-3xl font-bold text-white">{client.name}</h2>
-                      <Badge variant="secondary" className="bg-green-600/20 text-green-400 mt-2">
+                      <Badge variant="secondary" className="bg-blue-600/20 text-blue-400 mt-2">
                         {client.industry}
                       </Badge>
                     </div>
@@ -125,7 +125,7 @@ export default function ClientsPage() {
                     <ul className="space-y-2">
                       {client.results.map((result, resultIndex) => (
                         <li key={resultIndex} className="text-gray-300 flex items-center">
-                          <div className="w-2 h-2 bg-green-400 rounded-full mr-3" />
+                          <div className="w-2 h-2 bg-blue-400 rounded-full mr-3" />
                           {result}
                         </li>
                       ))}
@@ -152,7 +152,7 @@ export default function ClientsPage() {
                     <CardHeader>
                       <div className="flex items-center justify-between">
                         <client.icon className="h-16 w-16 text-blue-400" />
-                        <Badge variant="secondary" className="bg-green-600/20 text-green-400">
+                        <Badge variant="secondary" className="bg-blue-600/20 text-blue-400">
                           {client.industry}
                         </Badge>
                       </div>
@@ -169,7 +169,7 @@ export default function ClientsPage() {
                           <div className="grid grid-cols-2 gap-4">
                             {client.results.slice(0, 4).map((result, idx) => (
                               <div key={idx} className="text-center p-3 bg-gray-800/50 rounded-lg">
-                                <div className="text-green-400 font-bold text-sm">{result}</div>
+                                <div className="text-blue-400 font-bold text-sm">{result}</div>
                               </div>
                             ))}
                           </div>
@@ -249,7 +249,7 @@ export default function ClientsPage() {
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
                 <Link href="/contact">Start Your Project</Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-green-500 text-green-400 hover:bg-green-500 hover:text-black px-8 py-4 text-lg">
+              <Button variant="outline" size="lg" className="border-gray-600 text-gray-300 hover:bg-gradient-to-b hover:from-gray-800 hover:to-[#0d0d12] hover:text-white px-8 py-4 text-lg">
                 <Link href="/services">Explore Services</Link>
               </Button>
             </div>

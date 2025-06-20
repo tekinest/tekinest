@@ -48,7 +48,7 @@ export default function NotFound() {
           >
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Oops! This page seems to have disappeared into the{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-gray-300 bg-clip-text text-transparent">
                 digital void
               </span>
             </h1>
@@ -112,20 +112,20 @@ export default function NotFound() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-900/50 border-gray-700 hover:border-green-500 transition-all duration-300 group">
+            <Card className="bg-gray-900/50 border-gray-700 hover:border-blue-500 transition-all duration-300 group">
               <CardContent className="p-6 text-center">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Search className="h-12 w-12 text-green-400 mx-auto mb-4 group-hover:text-green-300" />
+                  <Search className="h-12 w-12 text-blue-400 mx-auto mb-4 group-hover:text-blue-300" />
                 </motion.div>
                 <h3 className="text-lg font-semibold text-white mb-2">Our Services</h3>
                 <p className="text-gray-400 text-sm mb-4">
                   Discover our AI, cloud, and IT solutions for your business
                 </p>
                 <Link href="/services">
-                  <Button variant="outline" className="w-full border-green-500 text-green-400 hover:bg-green-500 hover:text-white">
+                  <Button variant="outline" className="w-full border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white">
                     Explore Services
                   </Button>
                 </Link>
@@ -160,7 +160,7 @@ export default function NotFound() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1, duration: 0.8 }}
-            className="bg-gradient-to-r from-blue-600/20 to-green-600/20 border border-gray-700 rounded-2xl p-8"
+            className="bg-gradient-to-r from-blue-600/20 to-gray-800/20 border border-gray-700 rounded-2xl p-8"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Lost? Let&apos;s Find the Right Tech Solution for You!

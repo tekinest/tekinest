@@ -68,10 +68,10 @@ export default function ContactPage() {
                 <Card className="bg-gray-900/50 border-gray-700">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
-                      <MessageSquare className="h-8 w-8 text-green-400" />
+                      <MessageSquare className="h-8 w-8 text-blue-400" />
                       <div>
                         <h3 className="text-white font-semibold">Consulting Services</h3>
-                        <p className="text-green-400">consulting@tekinest.com</p>
+                        <p className="text-blue-400">consulting@tekinest.com</p>
                         <p className="text-gray-400 text-sm">For project discussions and consulting</p>
                       </div>
                     </div>
@@ -291,14 +291,14 @@ export default function ContactPage() {
 
               <Card className="bg-gray-900/50 border-gray-700">
                 <CardHeader>
-                  <MessageSquare className="h-12 w-12 text-green-400 mx-auto mb-4" />
+                  <MessageSquare className="h-12 w-12 text-blue-400 mx-auto mb-4" />
                   <CardTitle className="text-white">Schedule a Call</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4">
                     Book a consultation to discuss your needs
                   </p>
-                  <Button variant="outline" className="border-green-500 text-green-400 hover:bg-green-500 hover:text-black">
+                  <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white">
                     <Link href="/schedule">Schedule Now</Link>
                   </Button>
                 </CardContent>

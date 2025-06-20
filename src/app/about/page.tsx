@@ -22,7 +22,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Badge variant="outline" className="border-green-500 text-green-400 mb-6">
+            <Badge variant="outline" className="border-blue-500 text-blue-400 mb-6">
               About Tekinest
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -70,7 +70,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-blue-600/20 to-green-600/20 rounded-2xl p-8 border border-gray-700">
+              <div className="bg-gradient-to-br from-blue-600/20 to-gray-800/20 rounded-2xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-semibold mb-6 text-white">Our Core Values</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
@@ -88,7 +88,7 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <Globe className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                    <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-white">Global Impact</h4>
                       <p className="text-gray-300 text-sm">Making technology accessible worldwide</p>
@@ -133,7 +133,7 @@ export default function AboutPage() {
             >
               <Card className="bg-gray-900/50 border-gray-700 h-full">
                 <CardHeader>
-                  <Lightbulb className="h-12 w-12 text-green-400 mb-4" />
+                  <Lightbulb className="h-12 w-12 text-blue-400 mb-4" />
                   <CardTitle className="text-white text-2xl">Our Vision</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -221,7 +221,7 @@ export default function AboutPage() {
               We appreciate young people hungry to solve real life problems of the world.
             </p>
             
-            <div className="bg-gradient-to-r from-blue-600/20 to-green-600/20 rounded-2xl p-8 border border-gray-700 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-blue-600/20 to-gray-800/20 rounded-2xl p-8 border border-gray-700 max-w-4xl mx-auto">
               <h3 className="text-2xl font-semibold mb-4 text-white">We&apos;re Looking For</h3>
               <div className="grid md:grid-cols-2 gap-6 text-left">
                 <ul className="space-y-2 text-gray-300">
@@ -230,7 +230,7 @@ export default function AboutPage() {
                     Passionate problem solvers
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3" />
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3" />
                     Technology enthusiasts
                   </li>
                   <li className="flex items-center">
@@ -240,7 +240,7 @@ export default function AboutPage() {
                 </ul>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3" />
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3" />
                     Creative thinkers
                   </li>
                   <li className="flex items-center">
@@ -248,14 +248,14 @@ export default function AboutPage() {
                     Team collaborators
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3" />
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3" />
                     Continuous learners
                   </li>
                 </ul>
               </div>
               
               <div className="mt-8">
-                <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
                   <Link href="/careers">View Open Positions</Link>
                 </Button>
               </div>
@@ -282,7 +282,7 @@ export default function AboutPage() {
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
                 <Link href="/contact">Get in Touch</Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-green-500 text-green-400 hover:bg-green-500 hover:text-black px-8 py-4 text-lg">
+              <Button variant="outline" size="lg" className="border-gray-600 text-gray-300 hover:bg-gradient-to-b hover:from-gray-800 hover:to-[#0d0d12] hover:text-white px-8 py-4 text-lg">
                 <Link href="/services">Explore Services</Link>
               </Button>
             </div>
