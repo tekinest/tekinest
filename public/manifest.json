@@ -1,0 +1,23 @@
+{
+  "name": "Tekinest - Democratizing Technology",
+  "short_name": "Tekinest",
+  "description": "Technology consulting company helping small businesses with AI, cloud solutions, and IT services.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "741x733",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "741x733",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

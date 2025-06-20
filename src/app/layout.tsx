@@ -15,6 +15,22 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Tekinest - Democratizing Technology for Everyone",
   description: "Technology consulting company helping small businesses with AI, cloud solutions, and IT services. Democratizing technological solutions for the masses.",
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'apple-touch-icon-precomposed',
+        url: '/apple-touch-icon.png',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
