@@ -29,7 +29,7 @@ export default function AboutPage() {
               Founded on Passion, Driven by Purpose
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Our mission is to democratize technological solutions to the masses, whether for the general public or small businesses globally.
+              Our mission is technological empowerment, whether for the general public or small businesses globally.
             </p>
           </motion.div>
         </div>
@@ -118,7 +118,7 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-gray-300 text-lg">
-                    To democratize technological solutions to the masses, making technology accessible, 
+                    Technological empowerment, making technology accessible, 
                     understandable, and transformative for small businesses and individuals globally.
                   </CardDescription>
                 </CardContent>

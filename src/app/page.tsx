@@ -23,7 +23,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              We empower business and everyone
+              We empower businesses and everyone
             </h1>
             <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-blue-400">
               with the beauty of technology
@@ -63,7 +63,7 @@ export default function Home() {
               Our Mission
             </Badge>
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              Democratize technological solutions to the masses
+              Technological empowerment
             </h3>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
               Whether for the general public or small businesses globally, we believe technology should be accessible, 

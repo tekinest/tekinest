@@ -33,6 +33,6 @@ This is a modern Next.js website for Tekinest, a technology consulting company t
 - Ensure accessibility compliance (ARIA labels, semantic HTML)
 
 ## Content Focus
-- Mission: Democratize technological solutions to masses
+- Mission: Technological empowerment
 - Services: AI cloud solutions, email, IT services, business process enhancements
 - Target: Small businesses and general public globally

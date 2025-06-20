@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tekinest - Democratizing Technology for Everyone",
-  description: "Technology consulting company helping small businesses with AI, cloud solutions, and IT services. Democratizing technological solutions for the masses.",
+  title: "Tekinest - Technological Empowerment for Everyone",
+  description: "Technology consulting company helping small businesses with AI, cloud solutions, and IT services. Technological empowerment for the masses.",
   manifest: "/manifest.json",
   icons: {
     icon: [

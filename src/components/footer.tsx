@@ -18,7 +18,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Democratizing technological solutions for small businesses and the general public globally. 
+              Technological empowerment for small businesses and the general public globally. 
               We empower everyone with the beauty of technology.
             </p>
             <div className="flex space-x-6">
@@ -91,7 +91,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025 Tekinest. All rights reserved. Democratizing technology for everyone.
+            © 2025 Tekinest. All rights reserved. Technological empowerment for everyone.
           </p>
         </div>
       </div>
