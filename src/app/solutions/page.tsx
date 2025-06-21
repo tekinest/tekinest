@@ -4,60 +4,67 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MessageSquare, Bot, GraduationCap, Users, ArrowRight, Star, Zap } from "lucide-react"
+import { Bot, Users, ArrowRight, Zap, Shirt, ChefHat, Monitor } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 
 export default function SolutionsPage() {
   const solutions = [
     {
-      name: "ChatNest",
-      tagline: "AI Chatbot Wrapper for Business Owners",
-      description: "Empower your business with intelligent AI conversations that understand your customers and provide instant, accurate responses 24/7.",
-      icon: MessageSquare,
+      name: "Tiwanova",
+      tagline: "Look elegant globally",
+      description: "Ready made garments made in Africa by vetted Taylors and fashion designers, shipped to you anywhere in the world in days. Take your measurement and have any style you want anytime, for affordable prices.",
+      icon: Shirt,
+      problem: "Looking elegant in historical garments is tough to access, imagine not being able to get a garment in days for an event or everyday life",
       features: [
-        "Custom AI training on your business data",
-        "Multi-platform integration (website, social media, messaging apps)",
-        "Real-time analytics and conversation insights",
-        "Seamless handoff to human agents when needed",
-        "Multilingual support for global reach",
-        "Industry-specific templates and workflows"
+        "Take measurement with your phone camera",
+        "Have vetted Taylors and fashion designers craft your chosen garment",
+        "Buy different materials to sew yourself or use",
+        "Global shipping in days",
+        "Affordable pricing",
+        "Traditional African attire focus"
       ],
-      benefits: [
-        "Reduce customer service costs by up to 70%",
-        "Provide instant 24/7 customer support",
-        "Increase customer satisfaction and engagement",
-        "Scale your business without hiring more staff"
-      ],
-      targetAudience: "Small to medium businesses looking to automate customer service and improve customer experience",
-      href: "/solutions/chatnest",
-      status: "Available Now",
-      pricing: "Starting at $99/month"
+      audience: "Everyone interested in traditional African attires",
+      status: "In Development",
+      href: "/solutions/tiwanova"
     },
     {
-      name: "TekiSite",
-      tagline: "Teaching Tech Skills to Young Folks",
-      description: "An interactive learning platform designed to teach essential technology skills to young people, preparing them for the digital future.",
-      icon: GraduationCap,
+      name: "Kosebi",
+      tagline: "A recipe wiki for African dishes for people living in the diaspora",
+      description: "This will be a wiki for various dishes of African origin, it will show you everything you need to make a dish from planning to even dishing it out.",
+      icon: ChefHat,
+      problem: "Many people who live abroad away from Africa are either forced to eat the dish of the place they are in or buy expensive African dishes from African restaurants. This is not always what they want, because the hunger African food can cure is different from what any other dish can cure.",
       features: [
-        "Interactive coding tutorials and exercises",
-        "Project-based learning approach",
-        "Mentorship programs with industry professionals",
-        "Career guidance and job placement assistance",
-        "Certification programs for various tech skills",
-        "Community forums and peer-to-peer learning"
+        "Comprehensive recipe database",
+        "Step-by-step cooking instructions",
+        "Modifications and substitution suggestions",
+        "Add ingredients to cart automatically",
+        "Cultural context and dish history",
+        "Community contributions and reviews"
       ],
-      benefits: [
-        "Bridge the digital skills gap",
-        "Provide accessible tech education",
-        "Create pathways to tech careers",
-        "Build a community of young tech enthusiasts"
+      audience: "Africans in diaspora and anyone else who enjoy African dishes",
+      status: "Beta",
+      href: "/solutions/kosebi"
+    },
+    {
+      name: "NestOS",
+      tagline: "A better dashboard for managing your doings",
+      description: "A chat interface that allows you take control of your day to day activity, ask questions about data, files and media. Also allow you connect with third party apps.",
+      icon: Monitor,
+      problem: "The current LLMs are too general and barely context aware, NestOS will provide a better interface that uses context of your files and media to provide answers and manipulates data.",
+      features: [
+        "Terminal to run commands on your files and media",
+        "Chat interface to query your apps and files",
+        "Ask it anything like a normal LLM using environment context",
+        "Organize results intelligently for continued conversations",
+        "Upload and store files in folders to reference later",
+        "Third-party app integrations"
       ],
-      targetAudience: "Young people aged 16-25 interested in learning technology skills and pursuing tech careers",
-      href: "/solutions/tekisite",
-      status: "Coming Soon",
-      pricing: "Freemium model with premium features"
+      audience: "Corporate employees, high performance individuals, ADHD folks that want to understand their life, those combining traditional UI with LLM",
+      status: "In Development",
+      href: "/solutions/nestos"
     }
   ]
 
@@ -89,7 +96,7 @@ export default function SolutionsPage() {
       {/* Solutions */}
       <section className="py-20 px-4 bg-black">
         <div className="container mx-auto">
-          <div className="space-y-20">
+          <div className="space-y-16">
             {solutions.map((solution, index) => (
               <motion.div
                 key={index}
@@ -97,110 +104,79 @@ export default function SolutionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
                 viewport={{ once: true }}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
+                className="max-w-6xl mx-auto"
               >
-                {/* Content */}
-                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="flex items-center mb-6">
-                    <solution.icon className="h-12 w-12 text-blue-400 mr-4" />
-                    <div>
-                      <h2 className="text-4xl font-bold text-white">{solution.name}</h2>
-                      <p className="text-lg text-blue-400 mt-1">{solution.tagline}</p>
+                <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                  {/* Solution Preview Box */}
+                  <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8 flex flex-col justify-center items-center">
+                    <h3 className="text-xl font-semibold text-white mb-6 text-center">Solution Preview</h3>
+                    <div className="relative w-full max-w-sm h-64 rounded-lg overflow-hidden border border-gray-600 bg-white/5 flex items-center justify-center">
+                      <Image
+                        src="/images/client-media/demo.png"
+                        alt={`${solution.name} preview`}
+                        fill
+                        className="object-contain p-4 hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
                     </div>
                   </div>
-                  
-                  <p className="text-lg text-gray-300 mb-6">
-                    {solution.description}
-                  </p>
 
-                  {/* Key Features */}
-                  <div className="mb-6">
-                    <h3 className="text-xl font-semibold text-white mb-3">Key Features</h3>
-                    <ul className="space-y-2">
-                      {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="text-gray-300 flex items-start">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Benefits */}
-                  <div className="mb-6">
-                    <h3 className="text-xl font-semibold text-white mb-3">Benefits</h3>
-                    <ul className="space-y-2">
-                      {solution.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-gray-300 flex items-start">
-                          <Star className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-blue-600 hover:bg-blue-700">
-                      <Link href={solution.href} className="flex items-center">
-                        Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                    {solution.status === "Available Now" && (
-                      <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white">
-                        <Link href="/contact">Get Started</Link>
-                      </Button>
-                    )}
-                  </div>
-                </div>
-
-                {/* Solution Card */}
-                <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                  <Card className="bg-gradient-to-br from-gray-900/70 to-gray-800/70 border-gray-700 h-full">
-                    <CardHeader>
-                      <div className="flex items-center justify-between mb-4">
-                        <solution.icon className="h-16 w-16 text-blue-400" />
-                        <Badge 
-                          variant={solution.status === "Available Now" ? "default" : "secondary"}
-                          className={solution.status === "Available Now" ? "bg-blue-600/20 text-blue-400" : "bg-orange-600/20 text-orange-400"}
-                        >
+                  {/* Solution Information Box */}
+                  <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8">
+                    <div className="flex items-center mb-6">
+                      <solution.icon className="h-12 w-12 text-blue-400 mr-4" />
+                      <div>
+                        <h2 className="text-3xl font-bold text-white">{solution.name}</h2>
+                        <p className="text-lg text-blue-400 mt-1">{solution.tagline}</p>
+                        <Badge variant="secondary" className="bg-blue-600/20 text-blue-400 mt-2">
                           {solution.status}
                         </Badge>
                       </div>
-                      <CardTitle className="text-white text-2xl">{solution.name}</CardTitle>
-                      <CardDescription className="text-blue-400 text-lg">
-                        {solution.tagline}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-6">
-                        <p className="text-gray-300">
-                          {solution.description}
+                    </div>
+                    
+                    <p className="text-lg text-gray-300 mb-8">
+                      {solution.description}
+                    </p>
+
+                    <div className="grid gap-8 mb-8">
+                      {/* Problem Statement */}
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-4">Problem We Solve</h3>
+                        <p className="text-gray-300 leading-relaxed">
+                          {solution.problem}
                         </p>
-                        
-                        <div>
-                          <h4 className="font-semibold text-white mb-2">Target Audience</h4>
-                          <p className="text-gray-300 text-sm">{solution.targetAudience}</p>
-                        </div>
-
-                        <div>
-                          <h4 className="font-semibold text-white mb-2">Pricing</h4>
-                          <p className="text-blue-400 font-medium">{solution.pricing}</p>
-                        </div>
-
-                        <div className="pt-4">
-                          {solution.status === "Available Now" ? (
-                            <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                              <Link href="/contact">Get Started Today</Link>
-                            </Button>
-                          ) : (
-                            <Button variant="outline" className="w-full border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black">
-                              <Link href="/contact">Join Waitlist</Link>
-                            </Button>
-                          )}
-                        </div>
                       </div>
-                    </CardContent>
-                  </Card>
+
+                      {/* Key Features */}
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
+                        <ul className="space-y-2">
+                          {solution.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="text-gray-300 flex items-center">
+                              <div className="w-2 h-2 bg-blue-400 rounded-full mr-3" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Target Audience */}
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-4">Target Audience</h3>
+                        <p className="text-gray-300">
+                          {solution.audience}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="text-center">
+                      <Button className="bg-blue-600 hover:bg-blue-700">
+                        <Link href={solution.href} className="flex items-center">
+                          Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}

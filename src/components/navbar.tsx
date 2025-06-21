@@ -105,7 +105,7 @@ export default function Navbar() {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-900 border border-gray-700">
-                    <li className="row-span-3">
+                    <li className="row-span-4">
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-br from-gray-800/20 to-blue-600/20 p-6 no-underline outline-none focus:shadow-md border border-gray-700"
@@ -123,12 +123,12 @@ export default function Navbar() {
                     <li>
                       <NavigationMenuLink asChild>
                         <a
-                          href="/solutions/chatnest"
+                          href="/solutions/tiwanova"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white hover:text-blue-900 focus:bg-white focus:text-blue-900"
                         >
-                          <div className="text-sm font-medium leading-none text-white">ChatNest</div>
+                          <div className="text-sm font-medium leading-none text-white">Tiwanova</div>
                           <p className="line-clamp-2 text-sm leading-snug text-gray-400">
-                            AI chatbot wrapper for business owners
+                            Look elegant globally with African garments
                           </p>
                         </a>
                       </NavigationMenuLink>
@@ -136,12 +136,25 @@ export default function Navbar() {
                     <li>
                       <NavigationMenuLink asChild>
                         <a
-                          href="/solutions/tekisite"
+                          href="/solutions/kosebi"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white hover:text-blue-900 focus:bg-white focus:text-blue-900"
                         >
-                          <div className="text-sm font-medium leading-none text-white">TekiSite</div>
+                          <div className="text-sm font-medium leading-none text-white">Kosebi</div>
                           <p className="line-clamp-2 text-sm leading-snug text-gray-400">
-                            Teaching tech skills to young folks
+                            African recipe wiki for diaspora communities
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="/solutions/nestos"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white hover:text-blue-900 focus:bg-white focus:text-blue-900"
+                        >
+                          <div className="text-sm font-medium leading-none text-white">NestOS</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-gray-400">
+                            Better dashboard for managing your doings
                           </p>
                         </a>
                       </NavigationMenuLink>
@@ -245,18 +258,25 @@ export default function Navbar() {
                 <h3 className="text-white font-semibold mb-2">Solutions</h3>
                 <div className="flex flex-col space-y-2 pl-4">
                   <Link 
-                    href="/solutions/chatnest" 
+                    href="/solutions/tiwanova" 
                     className="text-gray-300 hover:text-blue-400 transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    ChatNest
+                    Tiwanova
                   </Link>
                   <Link 
-                    href="/solutions/tekisite" 
+                    href="/solutions/kosebi" 
                     className="text-gray-300 hover:text-blue-400 transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    TekiSite
+                    Kosebi
+                  </Link>
+                  <Link 
+                    href="/solutions/nestos" 
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    NestOS
                   </Link>
                   <Link 
                     href="/solutions" 

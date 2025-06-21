@@ -120,25 +120,25 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
               {
-                name: "TechStart Solutions",
-                industry: "Software Development",
-                description: "AI-powered development tools for modern software teams",
-                website: "https://techstart.example.com",
-                logo: "🚀"
+                name: "Bricklage",
+                industry: "Real Estate",
+                description: "Technological infrastructure development for real estate market entry",
+                website: "#",
+                logo: "🏢"
               },
               {
-                name: "FinanceFlow",
-                industry: "Financial Technology",
-                description: "Streamlined financial management for small businesses",
-                website: "https://financeflow.example.com",
-                logo: "💰"
+                name: "aj-playground.org",
+                industry: "Portfolio",
+                description: "Comprehensive portfolio platform with blog and authentication",
+                website: "https://aj-playground.org",
+                logo: "👨‍�"
               },
               {
-                name: "HealthSync",
-                industry: "Healthcare Technology",
-                description: "Digital health solutions for modern medical practices",
-                website: "https://healthsync.example.com",
-                logo: "🏥"
+                name: "Mkagrik International",
+                industry: "Agriculture",
+                description: "Digital marketplace connecting farmers with produce and equipment",
+                website: "#",
+                logo: "�"
               }
             ].map((client, index) => (
               <motion.div

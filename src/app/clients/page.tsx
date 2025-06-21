@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Building, Leaf, User, Cpu } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 
@@ -89,94 +90,81 @@ export default function ClientsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
                 viewport={{ once: true }}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
+                className="max-w-6xl mx-auto"
               >
-                {/* Content */}
-                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="flex items-center mb-6">
-                    <client.icon className="h-12 w-12 text-blue-400 mr-4" />
-                    <div>
-                      <h2 className="text-3xl font-bold text-white">{client.name}</h2>
-                      <Badge variant="secondary" className="bg-blue-600/20 text-blue-400 mt-2">
-                        {client.industry}
-                      </Badge>
-                    </div>
-                  </div>
-                  
-                  <p className="text-lg text-gray-300 mb-6">
-                    {client.project}
-                  </p>
-
-                  {/* Services Provided */}
-                  <div className="mb-6">
-                    <h3 className="text-xl font-semibold text-white mb-3">Services Provided</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {client.services.map((service, serviceIndex) => (
-                        <Badge key={serviceIndex} variant="outline" className="border-blue-500 text-blue-400">
-                          {service}
-                        </Badge>
-                      ))}
+                <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                  {/* Client Logo Box */}
+                  <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8 flex flex-col justify-center items-center">
+                    <h3 className="text-xl font-semibold text-white mb-6 text-center">Client Logo</h3>
+                    <div className="relative w-full max-w-sm h-64 rounded-lg overflow-hidden border border-gray-600 bg-white/5 flex items-center justify-center">
+                      <Image
+                        src="/images/client-media/demo.png"
+                        alt={`${client.name} logo`}
+                        fill
+                        className="object-contain p-4 hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
                     </div>
                   </div>
 
-                  {/* Results */}
-                  <div className="mb-6">
-                    <h3 className="text-xl font-semibold text-white mb-3">Key Results</h3>
-                    <ul className="space-y-2">
-                      {client.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className="text-gray-300 flex items-center">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full mr-3" />
-                          {result}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Testimonial */}
-                  <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-300 mb-6">
-                    &quot;{client.testimonial}&quot;
-                  </blockquote>
-
-                  {client.link !== "#" && (
-                    <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white">
-                      <Link href={client.link} target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        Visit Website <ExternalLink className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  )}
-                </div>
-
-                {/* Visual Card */}
-                <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                  <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-gray-700 h-full">
-                    <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <client.icon className="h-16 w-16 text-blue-400" />
-                        <Badge variant="secondary" className="bg-blue-600/20 text-blue-400">
+                  {/* Client Information Box */}
+                  <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8">
+                    <div className="flex items-center mb-6">
+                      <client.icon className="h-12 w-12 text-blue-400 mr-4" />
+                      <div>
+                        <h2 className="text-3xl font-bold text-white">{client.name}</h2>
+                        <Badge variant="secondary" className="bg-blue-600/20 text-blue-400 mt-2">
                           {client.industry}
                         </Badge>
                       </div>
-                      <CardTitle className="text-white text-2xl">{client.name}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-gray-300 text-base mb-6">
-                        {client.project}
-                      </CardDescription>
-                      
-                      <div className="space-y-4">
-                        <div>
-                          <h4 className="font-semibold text-white mb-2">Impact Metrics</h4>
-                          <div className="grid grid-cols-2 gap-4">
-                            {client.results.slice(0, 4).map((result, idx) => (
-                              <div key={idx} className="text-center p-3 bg-gray-800/50 rounded-lg">
-                                <div className="text-blue-400 font-bold text-sm">{result}</div>
-                              </div>
-                            ))}
-                          </div>
+                    </div>
+                    
+                    <p className="text-lg text-gray-300 mb-8">
+                      {client.project}
+                    </p>
+
+                    <div className="grid gap-8 mb-8">
+                      {/* Services Provided */}
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-4">Services Provided</h3>
+                        <div className="flex flex-wrap gap-2">
+                          {client.services.map((service, serviceIndex) => (
+                            <Badge key={serviceIndex} variant="outline" className="border-blue-500 text-blue-400">
+                              {service}
+                            </Badge>
+                          ))}
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
+
+                      {/* Results */}
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-4">Key Results</h3>
+                        <ul className="space-y-2">
+                          {client.results.map((result, resultIndex) => (
+                            <li key={resultIndex} className="text-gray-300 flex items-center">
+                              <div className="w-2 h-2 bg-blue-400 rounded-full mr-3" />
+                              {result}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* Testimonial */}
+                    <blockquote className="border-l-4 border-blue-500 pl-6 italic text-gray-300 mb-6 bg-gray-800/30 p-4 rounded-r-lg">
+                      &quot;{client.testimonial}&quot;
+                    </blockquote>
+
+                    {client.link !== "#" && (
+                      <div className="text-center">
+                        <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white">
+                          <Link href={client.link} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                            Visit Website <ExternalLink className="ml-2 h-4 w-4" />
+                          </Link>
+                        </Button>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             ))}
