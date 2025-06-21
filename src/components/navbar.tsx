@@ -60,7 +60,7 @@ export default function Navbar() {
                       <NavigationMenuLink asChild>
                         <a
                           href="/services/ai-cloud"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white hover:text-blue-900 focus:bg-white focus:text-blue-900"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800 hover:text-blue-400 focus:bg-gray-800 focus:text-blue-400"
                         >
                           <div className="text-sm font-medium leading-none text-white">AI Cloud Solutions</div>
                           <p className="line-clamp-2 text-sm leading-snug text-gray-400">
@@ -73,7 +73,7 @@ export default function Navbar() {
                       <NavigationMenuLink asChild>
                         <a
                           href="/services/email"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white hover:text-blue-900 focus:bg-white focus:text-blue-900"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800 hover:text-blue-400 focus:bg-gray-800 focus:text-blue-400"
                         >
                           <div className="text-sm font-medium leading-none text-white">Email Services</div>
                           <p className="line-clamp-2 text-sm leading-snug text-gray-400">
@@ -86,7 +86,7 @@ export default function Navbar() {
                       <NavigationMenuLink asChild>
                         <a
                           href="/services/it-support"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white hover:text-blue-900 focus:bg-white focus:text-blue-900"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800 hover:text-blue-400 focus:bg-gray-800 focus:text-blue-400"
                         >
                           <div className="text-sm font-medium leading-none text-white">IT Support</div>
                           <p className="line-clamp-2 text-sm leading-snug text-gray-400">
@@ -124,7 +124,7 @@ export default function Navbar() {
                       <NavigationMenuLink asChild>
                         <a
                           href="/solutions/tiwanova"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white hover:text-blue-900 focus:bg-white focus:text-blue-900"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800 hover:text-blue-400 focus:bg-gray-800 focus:text-blue-400"
                         >
                           <div className="text-sm font-medium leading-none text-white">Tiwanova</div>
                           <p className="line-clamp-2 text-sm leading-snug text-gray-400">
@@ -137,7 +137,7 @@ export default function Navbar() {
                       <NavigationMenuLink asChild>
                         <a
                           href="/solutions/kosebi"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white hover:text-blue-900 focus:bg-white focus:text-blue-900"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800 hover:text-blue-400 focus:bg-gray-800 focus:text-blue-400"
                         >
                           <div className="text-sm font-medium leading-none text-white">Kosebi</div>
                           <p className="line-clamp-2 text-sm leading-snug text-gray-400">
@@ -150,7 +150,7 @@ export default function Navbar() {
                       <NavigationMenuLink asChild>
                         <a
                           href="/solutions/nestos"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white hover:text-blue-900 focus:bg-white focus:text-blue-900"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800 hover:text-blue-400 focus:bg-gray-800 focus:text-blue-400"
                         >
                           <div className="text-sm font-medium leading-none text-white">NestOS</div>
                           <p className="line-clamp-2 text-sm leading-snug text-gray-400">

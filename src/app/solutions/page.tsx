@@ -96,7 +96,7 @@ export default function SolutionsPage() {
       {/* Solutions */}
       <section className="py-20 px-4 bg-black">
         <div className="container mx-auto">
-          <div className="space-y-16">
+          <div className="space-y-24">
             {solutions.map((solution, index) => (
               <motion.div
                 key={index}
@@ -104,77 +104,90 @@ export default function SolutionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
                 viewport={{ once: true }}
-                className="max-w-6xl mx-auto"
+                className="w-full"
               >
-                <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-                  {/* Solution Preview Box */}
-                  <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-semibold text-white mb-6 text-center">Solution Preview</h3>
-                    <div className="relative w-full max-w-sm h-64 rounded-lg overflow-hidden border border-gray-600 bg-white/5 flex items-center justify-center">
-                      <Image
-                        src="/images/client-media/demo.png"
-                        alt={`${solution.name} preview`}
-                        fill
-                        className="object-contain p-4 hover:scale-105 transition-transform duration-300"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Solution Information Box */}
-                  <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8">
-                    <div className="flex items-center mb-6">
-                      <solution.icon className="h-12 w-12 text-blue-400 mr-4" />
-                      <div>
-                        <h2 className="text-3xl font-bold text-white">{solution.name}</h2>
+                <div className="grid lg:grid-cols-12 gap-8">
+                  {/* Solution Preview Box - Takes 4/12 width */}
+                  <div className={`lg:col-span-4 ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'} bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8 flex flex-col justify-between`}>
+                    <div>
+                      <div className="text-center mb-6">
+                        <solution.icon className="h-16 w-16 text-blue-400 mx-auto mb-4" />
+                        <h3 className="text-2xl font-bold text-white">{solution.name}</h3>
                         <p className="text-lg text-blue-400 mt-1">{solution.tagline}</p>
-                        <Badge variant="secondary" className="bg-blue-600/20 text-blue-400 mt-2">
+                        <Badge variant="secondary" className="bg-blue-600/20 text-blue-400 mt-3">
                           {solution.status}
                         </Badge>
                       </div>
-                    </div>
-                    
-                    <p className="text-lg text-gray-300 mb-8">
-                      {solution.description}
-                    </p>
-
-                    <div className="grid gap-8 mb-8">
-                      {/* Problem Statement */}
-                      <div>
-                        <h3 className="text-xl font-semibold text-white mb-4">Problem We Solve</h3>
-                        <p className="text-gray-300 leading-relaxed">
-                          {solution.problem}
-                        </p>
-                      </div>
-
-                      {/* Key Features */}
-                      <div>
-                        <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
-                        <ul className="space-y-2">
-                          {solution.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="text-gray-300 flex items-center">
-                              <div className="w-2 h-2 bg-blue-400 rounded-full mr-3" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Target Audience */}
-                      <div>
-                        <h3 className="text-xl font-semibold text-white mb-4">Target Audience</h3>
-                        <p className="text-gray-300">
-                          {solution.audience}
-                        </p>
+                      <div className="relative w-full h-48 rounded-lg overflow-hidden border border-gray-600 bg-white/5 flex items-center justify-center">
+                        <Image
+                          src="/images/client-media/demo.png"
+                          alt={`${solution.name} preview`}
+                          fill
+                          className="object-contain p-4 hover:scale-105 transition-transform duration-300"
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                        />
                       </div>
                     </div>
-
-                    <div className="text-center">
-                      <Button className="bg-blue-600 hover:bg-blue-700">
-                        <Link href={solution.href} className="flex items-center">
+                    <div className="mt-6">
+                      <Button className="bg-blue-600 hover:bg-blue-700 w-full">
+                        <Link href={solution.href} className="flex items-center justify-center">
                           Learn More <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
+                    </div>
+                  </div>
+
+                  {/* Solution Information Box - Takes 8/12 width */}
+                  <div className={`lg:col-span-8 ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'} bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8`}>
+                    <div className="space-y-8">
+                      {/* Header */}
+                      <div>
+                        <h2 className="text-3xl font-bold text-white mb-4">Solution Overview</h2>
+                        <p className="text-lg text-gray-300 leading-relaxed">
+                          {solution.description}
+                        </p>
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-6">
+                        {/* Left Column - Problem & Audience */}
+                        <div className="space-y-6">
+                          {/* Problem Statement */}
+                          <div className="bg-gradient-to-br from-red-900/20 to-red-800/10 p-5 rounded-xl border border-red-500/30">
+                            <h3 className="text-lg font-semibold text-red-400 mb-3">Problem We Solve</h3>
+                            <p className="text-gray-300 text-sm leading-relaxed">
+                              {solution.problem}
+                            </p>
+                          </div>
+
+                          {/* Target Audience */}
+                          <div className="bg-gradient-to-br from-green-900/20 to-green-800/10 p-5 rounded-xl border border-green-500/30">
+                            <h3 className="text-lg font-semibold text-green-400 mb-3">Target Audience</h3>
+                            <p className="text-gray-300 text-sm leading-relaxed">
+                              {solution.audience}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Right Column - Features */}
+                        <div>
+                          <h3 className="text-lg font-semibold text-white mb-4">Key Features</h3>
+                          <div className="space-y-2">
+                            {solution.features.slice(0, 6).map((feature, featureIndex) => (
+                              <div key={featureIndex} className="flex items-start">
+                                <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0" />
+                                <span className="text-gray-300 text-sm leading-relaxed">{feature}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Call to Action */}
+                      <div className="flex gap-4 pt-4">
+                        <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-gradient-to-b hover:from-gray-800 hover:to-[#0d0d12] hover:text-white flex-1">
+                          <Link href="/contact">Contact Us</Link>
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>

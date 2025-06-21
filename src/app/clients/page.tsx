@@ -82,7 +82,7 @@ export default function ClientsPage() {
       {/* Client Case Studies */}
       <section className="py-20 px-4 bg-black">
         <div className="container mx-auto">
-          <div className="space-y-16">
+          <div className="space-y-24">
             {clients.map((client, index) => (
               <motion.div
                 key={index}
@@ -90,80 +90,89 @@ export default function ClientsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
                 viewport={{ once: true }}
-                className="max-w-6xl mx-auto"
+                className="w-full"
               >
-                <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-                  {/* Client Logo Box */}
-                  <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-semibold text-white mb-6 text-center">Client Logo</h3>
-                    <div className="relative w-full max-w-sm h-64 rounded-lg overflow-hidden border border-gray-600 bg-white/5 flex items-center justify-center">
-                      <Image
-                        src="/images/client-media/demo.png"
-                        alt={`${client.name} logo`}
-                        fill
-                        className="object-contain p-4 hover:scale-105 transition-transform duration-300"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Client Information Box */}
-                  <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8">
-                    <div className="flex items-center mb-6">
-                      <client.icon className="h-12 w-12 text-blue-400 mr-4" />
-                      <div>
-                        <h2 className="text-3xl font-bold text-white">{client.name}</h2>
+                <div className="grid lg:grid-cols-12 gap-8">
+                  {/* Client Logo Box - Takes 4/12 width */}
+                  <div className={`lg:col-span-4 ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'} bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8 flex flex-col justify-between`}>
+                    <div>
+                      <div className="text-center mb-6">
+                        <client.icon className="h-16 w-16 text-blue-400 mx-auto mb-4" />
+                        <h3 className="text-2xl font-bold text-white">{client.name}</h3>
                         <Badge variant="secondary" className="bg-blue-600/20 text-blue-400 mt-2">
                           {client.industry}
                         </Badge>
                       </div>
-                    </div>
-                    
-                    <p className="text-lg text-gray-300 mb-8">
-                      {client.project}
-                    </p>
-
-                    <div className="grid gap-8 mb-8">
-                      {/* Services Provided */}
-                      <div>
-                        <h3 className="text-xl font-semibold text-white mb-4">Services Provided</h3>
-                        <div className="flex flex-wrap gap-2">
-                          {client.services.map((service, serviceIndex) => (
-                            <Badge key={serviceIndex} variant="outline" className="border-blue-500 text-blue-400">
-                              {service}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Results */}
-                      <div>
-                        <h3 className="text-xl font-semibold text-white mb-4">Key Results</h3>
-                        <ul className="space-y-2">
-                          {client.results.map((result, resultIndex) => (
-                            <li key={resultIndex} className="text-gray-300 flex items-center">
-                              <div className="w-2 h-2 bg-blue-400 rounded-full mr-3" />
-                              {result}
-                            </li>
-                          ))}
-                        </ul>
+                      <div className="relative w-full h-48 rounded-lg overflow-hidden border border-gray-600 bg-white/5 flex items-center justify-center">
+                        <Image
+                          src="/images/client-media/demo.png"
+                          alt={`${client.name} logo`}
+                          fill
+                          className="object-contain p-4 hover:scale-105 transition-transform duration-300"
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                        />
                       </div>
                     </div>
-
-                    {/* Testimonial */}
-                    <blockquote className="border-l-4 border-blue-500 pl-6 italic text-gray-300 mb-6 bg-gray-800/30 p-4 rounded-r-lg">
-                      &quot;{client.testimonial}&quot;
-                    </blockquote>
-
                     {client.link !== "#" && (
-                      <div className="text-center">
-                        <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white">
-                          <Link href={client.link} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      <div className="mt-6">
+                        <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white w-full">
+                          <Link href={client.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                             Visit Website <ExternalLink className="ml-2 h-4 w-4" />
                           </Link>
                         </Button>
                       </div>
                     )}
+                  </div>
+
+                  {/* Client Information Box - Takes 8/12 width */}
+                  <div className={`lg:col-span-8 ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'} bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-2xl p-8`}>
+                    <div className="space-y-6">
+                      {/* Header */}
+                      <div>
+                        <h2 className="text-3xl font-bold text-white mb-4">Project Overview</h2>
+                        <p className="text-lg text-gray-300 leading-relaxed">
+                          {client.project}
+                        </p>
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-6">
+                        {/* Left Column - Services */}
+                        <div>
+                          <h3 className="text-xl font-semibold text-white mb-4">Services Provided</h3>
+                          <div className="space-y-2">
+                            {client.services.map((service, serviceIndex) => (
+                              <div key={serviceIndex} className="flex items-center p-3 bg-gray-800/40 rounded-lg border border-gray-600/50">
+                                <div className="w-2 h-2 bg-blue-400 rounded-full mr-3" />
+                                <span className="text-gray-300">{service}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Right Column - Results */}
+                        <div>
+                          <h3 className="text-xl font-semibold text-white mb-4">Key Results</h3>
+                          <div className="space-y-3">
+                            {client.results.map((result, resultIndex) => (
+                              <div key={resultIndex} className="bg-gradient-to-r from-blue-600/20 to-blue-800/20 p-4 rounded-lg border border-blue-500/30">
+                                <div className="flex items-center">
+                                  <div className="w-3 h-3 bg-blue-400 rounded-full mr-3" />
+                                  <span className="text-white font-medium">{result}</span>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Testimonial */}
+                      <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/30 p-6 rounded-xl border border-gray-600/50">
+                        <h3 className="text-lg font-semibold text-white mb-3">Client Testimonial</h3>
+                        <blockquote className="text-gray-300 italic leading-relaxed">
+                          &quot;{client.testimonial}&quot;
+                        </blockquote>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
