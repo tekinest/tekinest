@@ -20,7 +20,7 @@ export default function ClientsPage() {
       services: ["Cloud Infrastructure", "Database Design", "API Development", "Security Implementation"],
       results: ["50% faster deployment", "Enhanced security", "Scalable architecture", "Improved performance"],
       testimonial: "Tekinest helped us build a robust technological foundation that allowed us to enter the market with confidence.",
-      link: "#"
+      link: "https://bricklage.com"
     },
     {
       name: "aj-playground.org",
@@ -40,7 +40,7 @@ export default function ClientsPage() {
       services: ["E-commerce Platform", "Inventory Management", "Farmer Network", "Mobile App"],
       results: ["200% increase in connections", "Streamlined operations", "Digital marketplace", "Global reach"],
       testimonial: "Tekinest transformed our traditional farming business into a modern, connected agricultural network.",
-      link: "#"
+      link: "https://mk-agrikint.org"
     },
     {
       name: "Tibratech Industries",
@@ -50,7 +50,7 @@ export default function ClientsPage() {
       services: ["Website Design", "Content Management", "SEO Optimization", "Performance Tuning"],
       results: ["75% increase in leads", "Improved user experience", "Better search rankings", "Professional presence"],
       testimonial: "Our new website perfectly represents our technology services and has significantly increased our online presence.",
-      link: "#"
+      link: "https://tibratechindustries.com"
     }
   ]
 

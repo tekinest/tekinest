@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
         {/* Animated Background Lines */}
@@ -61,7 +61,7 @@ export default function Home() {
             />
           ))}
         </div>
-        
+
         <div className="container mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -77,7 +77,7 @@ export default function Home() {
             <p className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-16 max-w-5xl mx-auto leading-relaxed">
               and utilize the power to solve major problems
             </p>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ export default function Home() {
                 name: "Bricklage",
                 industry: "Real Estate",
                 description: "Technological infrastructure development for real estate market entry",
-                website: "#",
+                website: "https://bricklage.com",
                 logo: "🏢"
               },
               {
@@ -131,14 +131,14 @@ export default function Home() {
                 industry: "Portfolio",
                 description: "Comprehensive portfolio platform with blog and authentication",
                 website: "https://aj-playground.org",
-                logo: "👨‍�"
+                logo: "👨‍💻"
               },
               {
                 name: "Mkagrik International",
                 industry: "Agriculture",
                 description: "Digital marketplace connecting farmers with produce and equipment",
-                website: "#",
-                logo: "�"
+                website: "https://mk-agrikint.org",
+                logo: "🌾"
               }
             ].map((client, index) => (
               <motion.div
@@ -316,7 +316,7 @@ export default function Home() {
               <h3 className="text-2xl md:text-3xl font-semibold mb-8 text-white text-center lg:text-left">
                 What Sets Us Apart
               </h3>
-              
+
               <div className="grid gap-6">
                 {[
                   {
@@ -392,7 +392,7 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
               Let&apos;s discuss how we can help you leverage technology to achieve your business goals.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
                 <Link href="/contact">Get Started Today</Link>
