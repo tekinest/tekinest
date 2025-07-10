@@ -1,7 +1,7 @@
 
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -11,9 +11,14 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 
 export default function CareersPage() {
+  const [mounted, setMounted] = useState(false)
   const [applicationSubmitted, setApplicationSubmitted] = useState(false)
   const [applicationEmail, setApplicationEmail] = useState("")
   const [selectedPosition, setSelectedPosition] = useState("")
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const positions = [
     // Software Engineers (5)
@@ -142,6 +147,21 @@ export default function CareersPage() {
       setSelectedPosition(position)
       setApplicationSubmitted(true)
     }
+  }
+
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-black text-white">
+        <Navbar />
+        <section className="pt-32 pb-20 px-4 min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto"></div>
+            <p className="text-gray-400 mt-4">Loading...</p>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    )
   }
 
   if (applicationSubmitted) {
